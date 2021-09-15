@@ -200,3 +200,43 @@ input {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+
+/* Media query started here */
+
+@media screen and (max-width: 900px) {
+  body {
+    background-color: green;
+  }
+
+  .leftColorBox {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .bottomButton {
+    display: none;
+    font-size: calc(10px + 2vmin);
+  }
+
+  .leftColorBox button {
+    margin-top: 5rem;
+    position: initial;
+    font-size: calc(10px + 2vmin);
+  }
+
+  .leftBoxColorValues {
+    display: flex;
+    position: initial;
+    flex-direction: column;
+    width: 100%;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .leftColorBox h3 {
+    font-size: calc(10px + 2vmin);
+  }
+  .rightColorBox {
+    display: none;
+  }
+}

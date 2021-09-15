@@ -1,2 +1,4 @@
-export const singleQuote = true;
-export const trailingComma = 'all';
+module.exports = {
+  singleQuote: true,
+  trailingComma: 'all',
+};

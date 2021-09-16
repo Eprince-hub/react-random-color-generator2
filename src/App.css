@@ -66,7 +66,7 @@ Personal styling starts here!
   text-align: left;
   position: absolute;
   right: 0.5rem;
-  top: 2.5rem;
+  top: 4.5rem;
 }
 
 .leftColorBox h3:first-of-type {
@@ -80,7 +80,7 @@ Personal styling starts here!
 .leftColorBox h3 {
   color: #ffffff;
   font-size: 1.8rem;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   padding: 1.3rem 0.5rem;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -102,7 +102,9 @@ Personal styling starts here!
   transition: all 0.3s ease-in-out;
 }
 
-.leftColorBox button:hover {
+.leftColorBox button:hover,
+.customColorButton:hover,
+.customBoxButton:hover {
   background: #c88b4b;
 }
 
@@ -199,6 +201,7 @@ input {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Media query started here */

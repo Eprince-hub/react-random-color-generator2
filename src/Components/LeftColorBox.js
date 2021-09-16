@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 
 function LeftColorBox() {
+  // declaring the state variables that will change values according to their names!
+  const [backgroundColor, setBackgroundColor] = useState('#c88b4b');
+
+  const [hexColorValue, setHexColorValue] = useState('#c88b4b');
+
+  const [rgbColorValue, setRgbColorValue] = useState('200,139,75');
+
+  // This function will generate a random Hex color code
+  // and it is called when the button is clicked!
   function generateRandomHex() {
     const colorValues = [
       1,
@@ -27,12 +36,9 @@ function LeftColorBox() {
 
     return colorHex;
   }
-  const hexValue = generateRandomHex();
 
-  // Trying to convert the returned hexColor code to RGB!
-
-  const rgbColor = hexValue;
-  const newValue = rgbColor.slice(1);
+  // This function will be called when the button is clicked
+  // and would convert the generated Hex color code to an RGB
 
   function convertToRGB(changeHexValue) {
     const regex = /.{1,2}/g;
@@ -45,19 +51,26 @@ function LeftColorBox() {
     return rgbArrayValue;
   }
 
-  // convertToRGB(newValue);
-  const rgbValue = convertToRGB(newValue);
-
-  const [backgroundColor, setBackgroundColor] = useState('#c88b4b');
   return (
     <div className="leftColorBox" style={{ backgroundColor: backgroundColor }}>
       <div className="leftBoxColorValues">
-        <h3>{`Hex Value: ${hexValue}`}</h3>
-        <h3>{`RGB Value: rgb(${rgbValue})`}</h3>
+        <h3>{`Hex Value: ${hexColorValue}`}</h3>
+        <h3>{`RGB Value: rgb(${rgbColorValue})`}</h3>
       </div>
       <button
         onClick={() => {
-          setBackgroundColor(hexValue);
+          const retunedHexColorValue = generateRandomHex();
+
+          // This slices off the # from the hex color code
+          // and send the remaining value to the function that converts it to the RGB
+          // color code and sets it to the RGB state variable!
+          setRgbColorValue(convertToRGB(retunedHexColorValue.slice(1)));
+
+          // setting the HexColor state variable
+          setHexColorValue(retunedHexColorValue);
+
+          // setting the background color state variable
+          setBackgroundColor(retunedHexColorValue);
         }}
       >
         Change the Color

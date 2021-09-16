@@ -1,6 +1,6 @@
 import './App.css';
-import LeftColorBox from './components/LeftColorBox';
-import RightColorBox from './components/RightColorBox';
+import LeftColorBox from './componentsss/LeftColorBox';
+import RightColorBox from './componentsss/RightColorBox';
 
 function App() {
   // state here

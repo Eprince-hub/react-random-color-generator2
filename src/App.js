@@ -56,8 +56,6 @@ function App() {
     return rgbArrayValue;
   }
 
-  // ################
-
   return (
     <div className="App">
       {/* Render all my Components here */}

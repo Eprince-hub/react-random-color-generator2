@@ -1,13 +1,15 @@
+import { prependOnceListener } from 'process';
 import React from 'react';
 import ColorValueDisplay from './ColorValueDisplay';
 import CustomBoxDisplay from './CustomBoxDisplay';
 
-function RightColorBox() {
+function RightColorBox(props) {
   return (
-    <div className="rightColorBox">
-      <h4>On development</h4>
-      <ColorValueDisplay />
-      <CustomBoxDisplay />
+    <div
+      className="rightColorBox"
+      style={{ backgroundColor: props.rightBoxBackground }}
+    >
+      {props.children}
     </div>
   );
 }

@@ -69,7 +69,7 @@ function App() {
         />
 
         {/* the component that displays the color on the left screen */}
-        {/* the component has a children components for the color values */}
+        {/* the component has children components for the color values */}
         <RightColorBox rightBoxBackground={hexColorValue}>
           <ColorValueDisplay
             border={`5px solid ${hexColorValue}`}
@@ -77,6 +77,7 @@ function App() {
             rgbColorValue={`RGB Value: rgb(${rgbColorValue})`}
           />
 
+          {/* This will implement the custom box and the hue selection [To Do] */}
           <CustomBoxDisplay />
         </RightColorBox>
       </div>

@@ -1,4 +1,5 @@
 // Trying to implement the custom color capability
+// Would have to come back to this project when i've got the time.
 function UserCustomInput(props) {
   return (
     <div className={props.userColorChoiceContainer}>
@@ -13,7 +14,7 @@ function UserCustomInput(props) {
         <div className={props.luminosityWrap}>
           <label htmlFor="light">Light:</label>
           <input
-            type="checkbox"
+            type="radio"
             name="light"
             id="light"
             onChecked={props.lightChecked}
@@ -21,7 +22,7 @@ function UserCustomInput(props) {
 
           <label htmlFor="dark">Dark:</label>
           <input
-            type="checkbox"
+            type="radio"
             name="dark"
             id="dark"
             onChecked={props.darkChecked}

@@ -79,7 +79,7 @@ function App() {
           />
 
           {/* Takes care of the computation when the user inputs a color name and or chooses luminosity */}
-          <UserCustomInput />
+          <UserCustomInput info="Customize Your Color" />
 
           {/* This will implement the custom box and the hue selection [To Do] */}
           <CustomBoxDisplay />

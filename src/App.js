@@ -5,6 +5,7 @@ import CustomBoxDisplay from './components/CustomBoxDisplay';
 import HomeButton from './components/HomeButton';
 import LeftColorBox from './components/LeftColorBox';
 import RightColorBox from './components/RightColorBox';
+import UserCustomInput from './components/UserCustomInput';
 
 function App() {
   // declaring the state variables that will change values according to their names!
@@ -76,6 +77,9 @@ function App() {
             hexColorValue={`Hex Value: ${hexColorValue}`}
             rgbColorValue={`RGB Value: rgb(${rgbColorValue})`}
           />
+
+          {/* Takes care of the computation when the user inputs a color name and or chooses luminosity */}
+          <UserCustomInput />
 
           {/* This will implement the custom box and the hue selection [To Do] */}
           <CustomBoxDisplay />
